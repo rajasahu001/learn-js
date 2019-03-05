@@ -472,3 +472,4 @@ if (john.average > mark.average) {
 
 
 //passing function as arguments
+//function
