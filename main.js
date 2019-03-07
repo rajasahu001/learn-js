@@ -471,5 +471,88 @@ if (john.average > mark.average) {
 */
 
 
-//passing function as arguments
-//function
+//Function constructor
+
+var john = {
+	name: 'john',
+	yearOfBirth: 1990,
+	job: 'teacher'
+};
+
+
+var Person = function(name, yearOfBirth, job) {
+	this.name = name;
+	this.yearOfBirth = yearOfBirth;
+	this.job = job;
+	
+
+}
+
+Person.prototype.calculateAge = function() {
+		console.log(2019 - this.yearOfBirth);
+
+	}
+
+Person.prototype.lastName = 'smith';
+
+var john = new Person ('john', 1998, 'teacher');
+var jane = new Person ('jane', 1990, 'designer');
+var mark = new Person ('mark', 1948, 'retired');
+
+john.calculateAge();
+mark.calculateAge();
+jane.calculateAge();
+
+
+console.log(john.lastName);
+console.log(mark.lastName);
+console.log(jane.lstname);
+
+
+//example of function constructor
+
+var Student = function(name, yearOfBirth, grade) {
+	this.name = name;
+	this.yearOfBirth = yearOfBirth;
+	this.grade = grade;
+
+} 
+
+var ram    = new Student ('ram', 1998, 7);
+var avnish = new Student ('avnish', 2012, 2);
+var krishu = new Student('krishu', 2009, 5);
+
+console.log(ram);
+console.log(avnish);
+console.log(krishu);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
