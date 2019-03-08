@@ -468,7 +468,7 @@ if (john.average > mark.average) {
 
 }
 
-*/
+
 
 
 //Function constructor
@@ -516,7 +516,7 @@ var Student = function(name, yearOfBirth, grade) {
 	this.yearOfBirth = yearOfBirth;
 	this.grade = grade;
 
-} 
+};
 
 var ram    = new Student ('ram', 1998, 7);
 var avnish = new Student ('avnish', 2012, 2);
@@ -526,6 +526,50 @@ console.log(ram);
 console.log(avnish);
 console.log(krishu);
 
+*/
+
+
+//passing functions as arguements
+
+var years = [1990, 1997, 1995, 1993, 2005];
+
+
+function arrayCalc(arr, fn) {
+	var arrRes = [];
+	for (var i =0; i < arr.length; i++) {
+		arrRes.push(fn(arr[i]));
+
+	}
+	return arrRes;
+}
+
+function calculateAge(el) {
+	return 2018 - el;
+}
+
+function isFullAge(el) {
+	return el >= 18;
+}
+
+function maxHeartRate(el) {
+
+	if(el >= 18 && el <= 81) {
+		return Math.round(206.9 - (0.67 * el));
+	}
+	else {
+		return -1;
+	}
+
+	
+}
+
+var ages = arrayCalc(years, calculateAge);
+var fullAges = arrayCalc(ages, isFullAge);
+var rates = arrayCalc(ages, maxHeartRate);
+
+
+console.log(ages);
+console.log(rates);
 
 
 
